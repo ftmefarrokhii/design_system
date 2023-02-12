@@ -61,11 +61,10 @@ nav {
   padding-right: 0;
   background-color: rgb(221, 219, 219);
 }
+/* 
 .pro_searchdiv{
   display: inline-flex;
   margin-top: 0.5rem;
-  /* background-color: blue;
-  padding: 0.5rem; */
 }
 .loginicon span:nth-child(1){
   font-size: 2.5rem;
@@ -77,7 +76,13 @@ nav {
   width: 20px;
   height: 20px;
   margin: 12px;
-} 
+}  */
+.loginicon {
+  font-size: 2.5rem;
+  background-color: transparent;
+  color: #f9f9f9;
+  margin-right: 1rem;
+}
 .menubtn{
   background-color:#f9f9f9;
   width: 40px;

@@ -3,6 +3,7 @@ import Amazon from "./amazon";
 import Navbar from "./navbar";
 import Cart from "./cart";
 import CarProducts from "./CarProducts";
+import Search from "./Search";
 const HomePage =()=>{
     const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
@@ -33,6 +34,7 @@ const HomePage =()=>{
             <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
              )}
              <CarProducts></CarProducts>
+              {/* <Search></Search> */}
         </React.Fragment>
     )
 }

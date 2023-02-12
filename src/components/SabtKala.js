@@ -68,6 +68,10 @@ const SabtKala =()=>{
         console.log(files)  
         
     }
+    const submithandler = e =>{
+        e.preventDefault();
+        console.log(desc,title)
+    }
     return(
     <div className="file-upload">
         <h2 style={{textAlign:"center"}}>اطلاعات کالا را وارد کنید</h2>
@@ -93,7 +97,7 @@ const SabtKala =()=>{
                     ))}
                 </div>
             </div>
-            <button type="submit" className="btn-submit">Submit</button>
+            <button type="submit" onClick={submithandler} className="btn-submit">Submit</button>
         </form>
     </div>
 

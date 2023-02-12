@@ -46,3 +46,27 @@ section {
   outline: none;
   color: #fff;
 }
+.iconsearch{
+  width: 20px;
+  height: 20px;
+  margin: 12px;
+} 
+.search_div{
+  height: 45px;
+  /* background-color: rgb(221, 219, 219); */
+  background-color: blue;
+  float: center;
+  border-radius: 5px;
+  display: flex;
+}
+.searchinput{
+  width: 80%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  float: right;
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: rgb(221, 219, 219);
+}
