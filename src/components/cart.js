@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/cart.css";
 
-const Cart = ({ cart, setCart, handleChange }) => {
+const Cart = ({ cart, setCart, handleChange ,setShow }) => {
   const [price, setPrice] = useState(0);
 
   const handleRemove = (id) => {
@@ -19,6 +19,13 @@ const Cart = ({ cart, setCart, handleChange }) => {
   useEffect(() => {
     handlePrice();
   });
+
+  const cancelHandler =()=>{
+    setShow(true);
+  }
+  const orderHandler=()=>{
+    console.log(cart)
+  }
 
   return (
     <article>
@@ -42,6 +49,8 @@ const Cart = ({ cart, setCart, handleChange }) => {
       <div className="total">
         <span>Total Price of your Cart</span>
         <span>Rs - {price}</span>
+        <button onClick={orderHandler}>Order</button>
+        <button onClick={cancelHandler}>Cancel</button>
       </div>
     </article>
   );

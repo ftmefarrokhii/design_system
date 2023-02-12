@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Amazon from "./amazon";
 import Navbar from "./navbar";
 import Cart from "./cart";
-import CarProducts from "./CarProducts";
-import Search from "./Search";
+import NewProducts from "./NewProducts";
+import BestSelling from "./BestSelling";
+
 const HomePage =()=>{
     const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
@@ -29,12 +30,12 @@ const HomePage =()=>{
         <React.Fragment>
             <Navbar setShow={setShow} size={cart.length} />
               {show ? (
-             <Amazon handleClick={handleClick} />
+             <Amazon handleClick={handleClick}/>
              ) : (
-            <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+            <Cart cart={cart} setCart={setCart} handleChange={handleChange} setShow={setShow} />
              )}
-             <CarProducts></CarProducts>
-              {/* <Search></Search> */}
+             <NewProducts></NewProducts>
+             <BestSelling></BestSelling>
         </React.Fragment>
     )
 }

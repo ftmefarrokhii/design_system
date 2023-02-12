@@ -1,7 +1,7 @@
 import React from "react";
 
 const Cards = ({ item, handleClick }) => {
-  const { title, author, price, img } = item;
+  const { title, code, price, img } = item;
   return (
     <div className="cards">
       <div className="image_box">
@@ -9,7 +9,7 @@ const Cards = ({ item, handleClick }) => {
       </div>
       <div className="details">
         <p>{title}</p>
-        <p>Code : {author}</p>
+        <p>Code : {code}</p>
         <p>Price : {price}Rs</p>
         <button onClick={() => handleClick(item)}>Add to Cart</button>
       </div>

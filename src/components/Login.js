@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "../styles/Register.css";
 import { Link } from "react-router-dom";
+import HomePage from "./HomePage";
+import SabtKala from "./SabtKala";
 
 const Login =()=>{
     const [enteredUsername,setEnteredUsername]=useState('');
@@ -12,6 +14,8 @@ const Login =()=>{
     const [enteredPasswordTouched,setEnteredPasswordTouched]=useState(false);
     const enteredPasswordIsVaLID = enteredPassword.trim().length >= 8;
     const enteredPasswordIsInVaLID = !enteredPasswordIsVaLID && enteredPasswordTouched;
+
+    const [admin,setAdmin]=useState(false);
 
     let formIsValid = false;
 
@@ -36,6 +40,10 @@ const Login =()=>{
         }
 
         console.log(enteredUsername,enteredPassword);
+        if(enteredUsername === "admin" && enteredPassword==="12345678"){
+            console.log("its admin");
+            setAdmin(true);
+        }
         setEnteredUsername('');
         setEnteredUsernameTouched(false);
         setEnteredPassword('');
@@ -66,7 +74,9 @@ const Login =()=>{
             <input id="password" className="forminput"  placeholder="کلمه عبور" type='password' value={enteredPassword} onBlur={passwordblurHandler} onChange={passwordChangeHandler}></input>    
             {enteredPasswordIsInVaLID && <p style={{color:"red"}}>password should be at least 8 char</p>}
             </div>
-            <button type="submit" className="btn-submit">Submit</button>
+            <Link to='/admin'><button type="submit" className="btn-submit">Submit</button></Link>
+            {/* {admin && <Link to='/admin'><SabtKala></SabtKala></Link>} */}
+            
             <div>اگر هنوز عضو نشده اید ، <Link to='/register' >ثبت نام </Link>کنید</div>
 
         </form>
@@ -76,23 +86,4 @@ const Login =()=>{
 }
 export default Login;
 
-        // <div className="logindiv">
-        //     <p>ورود</p>
-        //     <div className="formdiv">
-        // <form onSubmit={submitHandler}>
-        //     {/* <label htmlFor="username">username</label> */}
-        //     <input id="username" className="forminput" placeholder="یوزر نیم" type='text' value={enteredUsername} onBlur={usernameonblurHandler} onChange={usernameChangeHandler}></input>
-        //     {nameInputIsInvalid && <p style={{color:"red"}}>username must not be empty</p>}
-        //     {/* <label htmlFor="email">email</label> */}
-        //     <input id="email" className="forminput"  placeholder="ایمیل" type='email' value={enteredEmail} onBlur={emailblurHandler} onChange={emailChangeHandler}></input>
-        //     {enteredEmailIsInvaLID && <p style={{color:"red"}}>email must contain @</p>}
-        //     {/* <label htmlFor="phonenumber">phonenumber</label> */}
-        //     <input id="number" className="forminput"  placeholder="شماره موبایل" type='number' value={enteredNumber} onBlur={numberblurHandler} onChange={numberChangeHandler}></input>
-        //     {enteredNumberIsInvalid && <p style={{color:"red"}}>phone number must be 12 char</p>}
-        //     {/* <label htmlFor="password">password</label> */}
-        //     <input id="password" className="forminput"  placeholder="کلمه عبور" type='password' value={enteredPassword} onBlur={passwordblurHandler} onChange={passwordChangeHandler}></input>
-        //     {enteredPasswordIsInVaLID && <p style={{color:"red"}}>password should be at least 8 char</p>}
-        //     <button type='submit' className="submitbtn" disabled={!formIsValid}>submit</button>
-        // </form>
-        // </div>
-        // </div>
+       

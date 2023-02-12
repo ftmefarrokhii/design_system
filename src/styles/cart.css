@@ -81,3 +81,16 @@ article {
   color:  #333;
   font-weight: bold;
 }
+
+.total button {
+  padding: 5px 10px;
+  margin: 5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgb(8, 10, 10);
+  border-radius: 5px;
+  cursor: pointer;
+}

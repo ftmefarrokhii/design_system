@@ -23,10 +23,6 @@ section {
   height: 200px;
 }
 
-.image_box img {
-  width: 150px;
-  height: 200px;
-}
 .details p:nth-child(1) {
   font-weight: bold;
 }
