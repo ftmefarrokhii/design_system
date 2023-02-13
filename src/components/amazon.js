@@ -2,18 +2,14 @@ import React, { useState } from "react";
 import list from "../data";
 import Cards from "./card";
 import "../styles/amazon.css";
-import Navbar from "./navbar";
 import { Fragment } from "react";
 import { BsSearch } from "react-icons/bs";
-
 
 const Amazon = ({ handleClick }) => {
   const[searchTerm,setSearchTerm]=useState('');
   const [show, setShow] = useState(false);
-  const [logs, setLogs] = useState([]);
 
-  // setLogs([...newKala]);
-  const nem=[...list];
+  const newlist=[...list];
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -27,11 +23,6 @@ const Amazon = ({ handleClick }) => {
           onChange={event =>{setSearchTerm(event.target.value)}}></input>
           </div>
 
-      {/* <div style={{marginBottom: "2rem", width:"600px" , backgroundColor:"red"}}>
-      <input type="search" name="" className="searchinput"  placeholder="search here..." 
-      onChange={event =>{setSearchTerm(event.target.value)}}></input>
-      </div> */}
-
     <section>
       
       
@@ -44,15 +35,10 @@ const Amazon = ({ handleClick }) => {
             return (<Cards key={item.id} item={item} handleClick={handleClick} />)
           })}
       {!searchTerm && 
-      list.map((item) => (
+      newlist.map((item) => (
         <Cards key={item.id} item={item} handleClick={handleClick} />
       ))}
 
-       
-     {/* {       nem.map((mored) => (
-        <Kala key={mored.id} mored={mored} handleClick={handleClick} />
-      ))} */}
-      
     </section>
     
     </Fragment>

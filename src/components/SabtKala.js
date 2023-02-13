@@ -1,11 +1,12 @@
 import { Fragment, useState } from "react";
 import { Link ,useHistory} from "react-router-dom";
 import list from "../data";
-import Cards from "./card";
+
 
 const SabtKala =()=>{
     let history = useHistory();
-    const [image, setImage] = useState(null)
+    const [image, setImage] = useState(null);
+    
 
     const[post,setPost]=useState({
         id:'',
@@ -35,7 +36,7 @@ const SabtKala =()=>{
         list.push({id:id,title:title,code:code,price:price,amount:amount,img:image});        
     }
 
-    return(
+    return(<Fragment>
     <div className="file-upload">
         <h2 style={{textAlign:"center"}}>اطلاعات کالا را وارد کنید</h2>
         <form className="" encType= "multipart /form-data">
@@ -61,17 +62,14 @@ const SabtKala =()=>{
 
             </div>
 
-            
-
             <Link to='/register' ><button type="submit" onClick={submithandler} className="btn-submit">Submit</button></Link>
         </form>
 
-        <button onClick={() => history.push('/')}>Back</button>
-
-        
-       
-        
+        <button className="btn-submit"  onClick={() => history.push('/')}>Back</button>
     </div>
+    
+    </Fragment>
+    
 
 
     )

@@ -4,6 +4,8 @@ import Navbar from "./navbar";
 import Cart from "./cart";
 import NewProducts from "./NewProducts";
 import BestSelling from "./BestSelling";
+import OrderList from "./OrderList";
+
 const HomePage =()=>{
     const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
@@ -35,6 +37,14 @@ const HomePage =()=>{
              )}
              <NewProducts></NewProducts>
              <BestSelling></BestSelling>
+
+          <div>
+            <h1>sefaresh moshtari</h1>
+            {cart.map((item) => (
+            <OrderList key={item.id} item={item} />
+            ))}
+          </div>
+
         </React.Fragment>
     )
 }
