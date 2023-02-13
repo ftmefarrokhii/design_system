@@ -19,7 +19,7 @@ const NewProducts=({item,handleClick })=>{
             
             
             <div className="item">
-                <div> <img width="250px" src={lbs1} alt="first slide"/></div>
+                <div> <img width="250px" src={lbs1} alt="first slide" /></div>
                 <div className="info">
                     <span>Code : 11</span>
                     <span>&75574</span>

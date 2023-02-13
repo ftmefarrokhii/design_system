@@ -4,31 +4,21 @@ import Cards from "./card";
 import "../styles/amazon.css";
 import Navbar from "./navbar";
 import { Fragment } from "react";
-// import "../styles/navbar.css";
 import { BsSearch } from "react-icons/bs";
-// import Button from 'react-bootstrap/Button';
-// import Offcanvas from 'react-bootstrap/Offcanvas';
-const Amazon = ({ handleClick , name, ...props}) => {
+
+
+const Amazon = ({ handleClick }) => {
   const[searchTerm,setSearchTerm]=useState('');
   const [show, setShow] = useState(false);
+  const [logs, setLogs] = useState([]);
+
+  // setLogs([...newKala]);
+  const nem=[...list];
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <Fragment>
-      
-      {/* <Button variant="primary" onClick={handleShow} className="me-2">
-        {name}
-      </Button>
-      <Offcanvas show={show} onHide={handleClose} {...props}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
-        </Offcanvas.Body>
-      </Offcanvas> */}
 
           <div style={{width:"400px" , backgroundColor:"rgb(221, 219, 219)",display:"flex",borderRadius: "10px",
           margin:"2rem",marginLeft:"30rem"}}>
@@ -57,6 +47,11 @@ const Amazon = ({ handleClick , name, ...props}) => {
       list.map((item) => (
         <Cards key={item.id} item={item} handleClick={handleClick} />
       ))}
+
+       
+     {/* {       nem.map((mored) => (
+        <Kala key={mored.id} mored={mored} handleClick={handleClick} />
+      ))} */}
       
     </section>
     

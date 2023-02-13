@@ -1,4 +1,3 @@
-
 const list = [
   {
     id: 1,

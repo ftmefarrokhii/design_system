@@ -4,7 +4,6 @@ import Navbar from "./navbar";
 import Cart from "./cart";
 import NewProducts from "./NewProducts";
 import BestSelling from "./BestSelling";
-
 const HomePage =()=>{
     const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
