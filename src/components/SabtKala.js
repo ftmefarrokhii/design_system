@@ -68,16 +68,18 @@ const SabtKala =()=>{
         console.log(files)  
         
     }
+    const newKala= [title,desc,photos]
     const submithandler = e =>{
         e.preventDefault();
-        console.log(desc,title)
+        console.log(desc,title,photos)
+        
     }
     return(
     <div className="file-upload">
         <h2 style={{textAlign:"center"}}>اطلاعات کالا را وارد کنید</h2>
         <form className="" encType= "multipart /form-data">
             <div className="custom-form-group" >
-                <input className="forminput" type="text" name="title" placeholder="کد کالا" value={title} onChange={handlechange}/>
+                <input className="forminput" type="text" name="title" placeholder="Enter Title..." value={title} onChange={handlechange}/>
             </div>
             <div className="custom-form-group">
                 <input className="forminput" type="text" name="desc" placeholder="قیمت" value={desc} onChange={handlechange}/>
@@ -99,6 +101,19 @@ const SabtKala =()=>{
             </div>
             <button type="submit" onClick={submithandler} className="btn-submit">Submit</button>
         </form>
+        <div>
+       
+
+            {newKala.map((item)=>(
+                <div>
+                    <h1>{title}</h1>
+                    <h2>{desc}</h2>
+                    <section>{photos.size}</section>
+
+                </div>
+                
+            ))}
+        </div>
     </div>
 
 

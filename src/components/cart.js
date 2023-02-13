@@ -24,7 +24,9 @@ const Cart = ({ cart, setCart, handleChange ,setShow }) => {
     setShow(true);
   }
   const orderHandler=()=>{
-    console.log(cart)
+    console.log(cart);
+    console.log(cart.item.amount)
+    
   }
 
   return (

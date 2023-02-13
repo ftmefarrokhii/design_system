@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import SabtKala from "./components/SabtKala";
 import NewProducts from "./components/NewProducts";
 import BestSelling from "./components/BestSelling";
+import Navbar from "./components/navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js'
 
@@ -17,7 +18,8 @@ const App = () => {
       <Route path="/register"><Register /></Route>
       <Route path="/login"><Login /></Route>
       <Route path="/admin"><SabtKala/></Route>
-      <Route path="/newest"><NewProducts/></Route>
+      <Route path="/newest"><Navbar></Navbar><NewProducts/></Route>
+      {/* <Route path="/newest"><Navbar></Navbar><NewProducts/></Route> */}
       <Route path="/bestselling"><BestSelling/></Route>
     </div>
   );
