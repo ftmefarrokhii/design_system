@@ -1,4 +1,5 @@
 import React from "react";
+import StarSix from "./StarSix";
 
 const Cards = ({ item, handleClick }) => {
   const { title, code, price, img } = item;
@@ -11,6 +12,7 @@ const Cards = ({ item, handleClick }) => {
         <p>{title}</p>
         <p>Code : {code}</p>
         <p>Price : {price}Rs</p>
+        <p><StarSix></StarSix></p>
         <button onClick={() => handleClick(item)}>Add to Cart</button>
       </div>
     </div>

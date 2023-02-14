@@ -5,7 +5,8 @@ import Cart from "./cart";
 import NewProducts from "./NewProducts";
 import BestSelling from "./BestSelling";
 import OrderList from "./OrderList";
-
+import Chart from "./Chart";
+import NewChart from "./NewChart";
 const HomePage =()=>{
     const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
@@ -45,6 +46,7 @@ const HomePage =()=>{
             ))}
           </div>
 
+              
         </React.Fragment>
     )
 }

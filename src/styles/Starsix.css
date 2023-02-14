@@ -1,0 +1,14 @@
+.starsix {
+   width: 100;
+   height: 100;
+}
+.starSixUp{
+    position: "absolute";
+    top: 0;
+    left: 0;
+}
+.starSixDown {
+    position: "absolute";
+    top: 25;
+    left: 0;
+}
