@@ -41,6 +41,7 @@ section {
   background-color: rgb(8, 10, 10);
   outline: none;
   color: #fff;
+  margin-bottom: 5px;
 }
 .iconsearch{
   width: 20px;
@@ -65,4 +66,11 @@ section {
   padding-left: 0;
   padding-right: 0;
   background-color: rgb(221, 219, 219);
+}
+
+.divrecords{
+  display: grid;
+  background-color: aqua;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
 }

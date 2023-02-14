@@ -8,7 +8,8 @@ import NewProducts from "./components/NewProducts";
 import BestSelling from "./components/BestSelling";
 import Navbar from "./components/navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js';
+import DetailPage from "./components/DetailPage";
 
 const App = () => {
   
@@ -21,6 +22,8 @@ const App = () => {
       <Route path="/newest"><Navbar></Navbar><NewProducts/></Route>
       {/* <Route path="/newest"><Navbar></Navbar><NewProducts/></Route> */}
       <Route path="/bestselling"><BestSelling/></Route>
+      <Route path="/detail"><DetailPage /></Route>
+
     </div>
   );
 };

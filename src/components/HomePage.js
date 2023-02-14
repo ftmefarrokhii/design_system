@@ -40,10 +40,12 @@ const HomePage =()=>{
              <BestSelling></BestSelling>
 
           <div>
-            <h1>sefaresh moshtari</h1>
+            <h1>Record Of Your Last Order</h1>
+            <div style={{display:"flex"}}>
             {cart.map((item) => (
             <OrderList key={item.id} item={item} />
             ))}
+            </div>
           </div>
 
               

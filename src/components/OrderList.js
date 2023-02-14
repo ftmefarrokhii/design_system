@@ -1,22 +1,25 @@
-import Cart from "./cart";
+import "../styles/amazon.css";
 
 const OrderList = ({item,cart})=>{
-    const { title, code, price,amount } = item;
-    // const total= price
-    // let ans += item.amount * item.price
-  
 
-    return(
-        <div className="details">
-        <p>{item.title}</p>
+  const { title, code, price, img ,amount} = item;
+
+  return (
+    <div className="section">
+    <div className="cards">
+      <div className="image_box">
+        <img src={img} alt="" />
+      </div>
+      <div className="details">
+        <p>{title}</p>
         <p>Code : {code}</p>
-        <p>Price : {price}Rs</p>
         <p>amount:{amount}</p>
-        <p>new</p>
-        <p>total:{item.amount * item.price}</p>
+        <p>Price : {price}Rs</p>
+        <p>total:{price * amount}</p>
 
       </div>
-    )
+      </div>
+    </div>)
 
 }
 

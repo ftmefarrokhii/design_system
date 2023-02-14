@@ -15,24 +15,23 @@ const Cart = ({ cart, setCart, handleChange ,setShow }) => {
     cart.map((item) => (ans += item.amount * item.price));
     setPrice(ans);
   };
-  // const handleAmount = () => {
-  //   let am = 0;
-  //   cart.map((item) => (am += item.amount ));
-  //   setAmountitem(am);
-  // };
-
 
   useEffect(() => {
     handlePrice();
-    // handleAmount();
   });
 
   const cancelHandler =()=>{
     setShow(true);
   }
+  
+  const clearHandler = () => {
+    setCart([]);
+  }
+
   const orderHandler=(e)=>{
     console.log(cart); 
     setShow(true);
+    // clearHandler();
   }
 
   return (
@@ -59,6 +58,7 @@ const Cart = ({ cart, setCart, handleChange ,setShow }) => {
         <span>Rs - {price}</span>
         <button onClick={orderHandler}>Order</button>
         <button onClick={cancelHandler}>Cancel</button>
+        <button onClick={clearHandler}>Clear cart</button>
       </div>
      
     </article>
