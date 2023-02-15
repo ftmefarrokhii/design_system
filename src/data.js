@@ -37,7 +37,7 @@ const list = [
     code: "104",
     price: 149,
     img: "https://m.media-amazon.com/images/I/91MUDk-xdmL._AC_UL320_.jpg",
-    amount: 1,
+    amount: 0,
   },
   {
     id: 6,

@@ -30,18 +30,19 @@
   }
 
 .input button {
-    font: inherit;
-    border: 1px solid #4f005f;
-    background: #4f005f;
-    color: white;
-    padding: 0.25rem 1rem;
-    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(8, 10, 10);
+    outline: none;
+    color: #fff;
+    margin-bottom: 5px;
   }
   
   .input button:hover,
   .input button:active {
-    background: #741188;
-    border-color: #741188;
+    background: #201f20;
+    border-color: #201f20;
   }
   
   .input button:focus {

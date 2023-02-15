@@ -5,6 +5,7 @@ import SatisfactionTime from "./SatisfactionTime";
 import SatisfactionCategory from "./SatisfactionCategory";
 import Chart from "./Chart";
 import NewChart from "./NewChart";
+import ConfirmOrder from "./ConfirmOrder";
 
 const SabtKala =()=>{
     let history = useHistory();
@@ -69,11 +70,11 @@ const SabtKala =()=>{
 
         <button className="btn-submit"  onClick={() => history.push('/')}>Back</button>
     </div>
-    <div><SatisfactionTime></SatisfactionTime></div>
+     {/* <div><SatisfactionTime></SatisfactionTime></div>
     <div><SatisfactionCategory></SatisfactionCategory></div>
     <div><Chart></Chart></div>
     <div><NewChart></NewChart></div>
-    
+    <div><ConfirmOrder></ConfirmOrder></div>  */}
     </Fragment>
     
 
