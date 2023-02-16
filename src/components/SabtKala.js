@@ -1,11 +1,6 @@
 import { Fragment, useState } from "react";
 import { Link ,useHistory} from "react-router-dom";
 import list from "../data";
-import SatisfactionTime from "./SatisfactionTime";
-import SatisfactionCategory from "./SatisfactionCategory";
-import Chart from "./Chart";
-import NewChart from "./NewChart";
-import ConfirmOrder from "./ConfirmOrder";
 
 const SabtKala =()=>{
     let history = useHistory();

@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import DetailPage from "./components/DetailPage";
 import TabAdmin from "./components/Tab";
+import EditPage from "./components/EditPage";
+
 const App = () => {
   
   return (
@@ -22,6 +24,8 @@ const App = () => {
       <Route path="/newest"><Navbar></Navbar><NewProducts/></Route>
       <Route path="/bestselling"><BestSelling/></Route>
       <Route path="/detail"><DetailPage /></Route>
+      <Route path="/edit"><EditPage /></Route>
+
 
     </div>
   );

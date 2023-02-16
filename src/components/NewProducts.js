@@ -99,7 +99,7 @@ const NewProducts=({item,handleClick })=>{
                 </div>
             </div>
         </Carousel.Item>
-        <Carousel.Item>
+        {/* <Carousel.Item>
             <div className="item">
                 <div> <img width="250px" src={lbs5} alt="first slide"/></div>
                 <div className="info">
@@ -107,7 +107,7 @@ const NewProducts=({item,handleClick })=>{
                     <span>&75574</span>
                 </div>
             </div>
-        </Carousel.Item>
+        </Carousel.Item> */}
         
       </Carousel></Fragment>
     )

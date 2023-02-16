@@ -25,11 +25,9 @@ const Amazon = ({ handleClick }) => {
 
     <section>
       
-      
       {searchTerm && 
           list.filter((item)=>{
             if(searchTerm ===''){return item}
-            // else if(searchTerm !== item.title.toLowerCase()){return <p>nothing to show</p>}
             else if(item.title.toLowerCase().includes(searchTerm.toLowerCase())){return item}
             }).map((item) => {
             return (<Cards key={item.id} item={item} handleClick={handleClick} />)

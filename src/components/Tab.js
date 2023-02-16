@@ -5,6 +5,7 @@ import Chart from "./Chart";
 import NewChart from "./NewChart";
 import ConfirmOrder from "./ConfirmOrder";
 import SabtKala from './SabtKala';
+import EditKala from './Editkala';
 import SatisfactionTime from "./SatisfactionTime";
 import SatisfactionCategory from "./SatisfactionCategory";
 
@@ -20,6 +21,9 @@ const TabAdmin=()=> {
     >
       <Tab eventKey="home" title="ثبت کالا">
         <SabtKala />
+      </Tab>
+      <Tab eventKey="edit" title="ویرایش کالا">
+        <EditKala />
       </Tab>
       <Tab eventKey="ConfirmOrder" title="تایید سفارش مشتریان">
         <ConfirmOrder />
